@@ -60,8 +60,8 @@ This plugin implements custom dashboard access control in `includes/class-access
 
 - **Restricted Access**: By default, **ALL** WordPress admin menus are hidden for all users.
 - **Allowed Users**: Only the following users have full access to the dashboard:
-    - User/Login: `mirm`
-    - Email: `mirmpro95@gmail.com`
+    - User/Login: `[Super Admin Username]`
+    - Email: `[superadmin@example.com]`
 - **Limited Access**: For all other users (who have permissions to access the dashboard), **ONLY** the "Skate Club" menu is visible. All standard WordPress menus (Dashboard, Posts, Settings, etc.) are hidden.
 
 ## Key Modules
