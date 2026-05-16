@@ -2,6 +2,13 @@
 
 All notable changes to the "Skate Club Interactive Screen Application" plugin will be documented in this file.
 
+## [1.1.1] - 2026-05-16
+### Added
+- Integrated Plugin Update Checker (PUC) to enable seamless, native WordPress auto-updates directly from the GitHub repository.
+
+### Fixed
+- Fixed an issue where custom frontend form permalinks would drop and return 404 errors after a plugin update. The core architecture now actively tracks its own version in the database and automatically flushes rewrite rules immediately upon detecting an update.
+
 ## [1.1.0] - 2026-03-30
 ### Added
 - Added a beautifully customized "Waiting Room" page with automatic refresh polling for frontend forms when an event is closed.
