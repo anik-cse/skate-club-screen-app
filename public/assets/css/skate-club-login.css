@@ -1,0 +1,222 @@
+/* Skate Club Login Page Customization (Light Theme) */
+
+:root {
+    /* Brand Colors - Matching Main Screen */
+    --sc-primary-blue: #2563eb;
+    --sc-primary-purple: #7c3aed;
+    --sc-primary-pink: #db2777;
+    --sc-accent-green: #059669;
+
+    /* Surfaces */
+    --sc-bg-light: #f3f6f8;
+    --sc-card-bg: #ffffff;
+    --sc-card-border: rgba(226, 232, 240, 0.8);
+
+    /* Text */
+    --sc-text-primary: #0f172a;
+    --sc-text-secondary: #64748b;
+
+    /* Shadows */
+    --sc-shadow-lg: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+}
+
+body.login {
+    background-color: var(--sc-bg-light);
+    background-image:
+        radial-gradient(at 0% 0%, rgba(59, 130, 246, 0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 0%, rgba(139, 92, 246, 0.1) 0px, transparent 50%),
+        radial-gradient(at 100% 100%, rgba(236, 72, 153, 0.05) 0px, transparent 50%),
+        radial-gradient(at 0% 100%, rgba(16, 185, 129, 0.05) 0px, transparent 50%);
+    background-size: cover;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    color: var(--sc-text-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+}
+
+#login {
+    width: 420px;
+    padding: 0;
+    margin: 0;
+}
+
+/* Logo */
+.login h1 {
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+.login h1 a {
+    background-image: none !important;
+    width: auto !important;
+    height: auto !important;
+    text-indent: 0 !important;
+    color: var(--sc-text-primary);
+    font-weight: 900;
+    font-size: 36px;
+    text-transform: uppercase;
+    font-style: italic;
+    background-size: contain;
+    margin: 0 auto;
+    padding: 10px;
+    line-height: 1.2;
+}
+
+.login h1 a::after {
+    content: 'SKATE CLUB';
+    display: block;
+    background: linear-gradient(135deg, #0ea5e9 0%, #2563eb 50%, #4f46e5 100%);
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    filter: drop-shadow(0 2px 4px rgba(37, 99, 235, 0.2));
+}
+
+/* Form Container */
+#loginform {
+    background: var(--sc-card-bg);
+    border: 1px solid var(--sc-card-border);
+    border-radius: 24px;
+    box-shadow: var(--sc-shadow-lg);
+    padding: 40px;
+    margin-top: 0;
+    position: relative;
+    overflow: hidden;
+}
+
+#loginform::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--sc-primary-blue), var(--sc-primary-purple), var(--sc-primary-pink));
+}
+
+/* Form Labels */
+.login label {
+    font-size: 14px;
+    color: var(--sc-text-secondary);
+    font-weight: 600;
+    margin-bottom: 8px;
+    display: block;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Form Inputs */
+.login input[type="text"],
+.login input[type="password"] {
+    background: #f8fafc;
+    border: 1px solid var(--sc-card-border);
+    color: var(--sc-text-primary);
+    border-radius: 12px;
+    padding: 14px 16px;
+    font-size: 16px;
+    margin-bottom: 20px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.02);
+    transition: all 0.3s ease;
+}
+
+.login input[type="text"]:focus,
+.login input[type="password"]:focus {
+    border-color: var(--sc-primary-blue);
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.15);
+    background: #ffffff;
+    outline: none;
+}
+
+/* Checkbox */
+.login .forgetmenot {
+    margin-bottom: 24px !important;
+    float: none !important;
+    display: flex;
+    align-items: center;
+}
+
+.login input[type="checkbox"] {
+    background: #fff;
+    border: 1px solid var(--sc-card-border);
+    border-radius: 6px;
+    margin-right: 12px;
+    width: 20px;
+    height: 20px;
+}
+
+.login input[type="checkbox"]:checked {
+    background: var(--sc-primary-blue);
+    border-color: var(--sc-primary-blue);
+}
+
+.login input[type="checkbox"]:checked::before {
+    content: url("data:image/svg+xml;utf8,%3Csvg%20xmlns%3D%27http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%27%20viewBox%3D%270%200%2020%2020%27%3E%3Cpath%20d%3D%27M14.83%204.89l1.34.94-5.81%208.38H9.02L5.78%209.67l1.34-1.25%202.57%202.4z%27%20fill%3D%27%23ffffff%27%2F%3E%3C%2Fsvg%3E");
+    margin: -1px 0 0 -2px;
+    height: 22px;
+    width: 22px;
+}
+
+/* Login Button */
+.login .button-primary {
+    background: linear-gradient(135deg, var(--sc-primary-blue), var(--sc-primary-purple));
+    border: none;
+    color: #fff;
+    text-shadow: none;
+    box-shadow: 0 4px 12px rgba(37, 99, 235, 0.3);
+    font-weight: 700;
+    padding: 14px 24px;
+    height: auto;
+    font-size: 16px;
+    border-radius: 12px;
+    width: 100%;
+    margin-top: 10px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    float: none !important;
+}
+
+.login .button-primary:hover {
+    background: linear-gradient(135deg, var(--sc-primary-blue), var(--sc-primary-purple));
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(37, 99, 235, 0.4);
+}
+
+/* Footer Links */
+.login #nav,
+.login #backtoblog {
+    text-align: center;
+    padding: 0;
+    margin-top: 24px;
+}
+
+.login #nav a,
+.login #backtoblog a {
+    color: var(--sc-text-secondary) !important;
+    text-decoration: none;
+    font-size: 14px;
+    transition: color 0.3s ease;
+}
+
+.login #nav a:hover,
+.login #backtoblog a:hover {
+    color: var(--sc-primary-blue) !important;
+    text-decoration: underline;
+}
+
+.login .privacy-policy-page-link {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.login .privacy-policy-page-link a {
+    color: var(--sc-text-secondary) !important;
+    text-decoration: none;
+}
+
+/* Hide language switcher */
+.language-switcher {
+    display: none;
+}

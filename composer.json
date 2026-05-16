@@ -1,0 +1,13 @@
+{
+    "name": "skate-club/screen-app",
+    "type": "wordpress-plugin",
+    "authors": [
+        {
+            "name": "Mir M",
+            "homepage": "https://mirm.pro/"
+        }
+    ],
+    "require": {
+        "chillerlan/php-qrcode": "^5.0"
+    }
+}
