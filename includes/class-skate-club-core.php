@@ -242,11 +242,14 @@ class Skate_Club_Core {
 	 * @since    1.0.0
 	 */
 	public function maybe_flush_rewrite_rules() {
-		$flushed = get_option( 'skate_club_rewrite_flushed_v3' );
+		// Check if the plugin version has changed since the last flush
+		$last_flushed_version = get_option( 'skate_club_rewrite_flushed_version', '0.0.0' );
 
-		if ( ! $flushed ) {
+		if ( version_compare( $last_flushed_version, SKATE_CLUB_VERSION, '<' ) ) {
+			// Register rules before flushing
+			$this->add_rewrite_rules();
 			flush_rewrite_rules();
-			update_option( 'skate_club_rewrite_flushed_v3', true );
+			update_option( 'skate_club_rewrite_flushed_version', SKATE_CLUB_VERSION );
 		}
 	}
 

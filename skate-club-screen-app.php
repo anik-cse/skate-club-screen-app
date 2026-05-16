@@ -3,7 +3,7 @@
  * Plugin Name: Skate Club Interactive Screen Application
  * Plugin URI: https://example.com/skate-club-screen-app
  * Description: Interactive screen application for skate club with QR code-based user engagement, song requests, voting, media uploads, spinner wheel, and raffle draws.
- * Version: 1.1.0
+ * Version: 1.1.1
  * Author: Mir M
  * Author URI: https://mirm.pro/
  * License: GPL-2.0+
@@ -41,7 +41,7 @@ $skate_club_update_checker->setBranch('main');
 /**
  * Current plugin version.
  */
-define( 'SKATE_CLUB_VERSION', '1.1.0' );
+define( 'SKATE_CLUB_VERSION', '1.1.1' );
 define( 'SKATE_CLUB_PLUGIN_DIR', plugin_dir_path( __FILE__ ) );
 define( 'SKATE_CLUB_PLUGIN_URL', plugin_dir_url( __FILE__ ) );
 define( 'SKATE_CLUB_PLUGIN_BASENAME', plugin_basename( __FILE__ ) );
