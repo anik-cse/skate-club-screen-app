@@ -25,6 +25,20 @@ if ( ! defined( 'WPINC' ) ) {
 require_once __DIR__ . '/vendor/autoload.php';
 
 /**
+ * Initialize Plugin Update Checker for GitHub auto-updates.
+ */
+require_once __DIR__ . '/includes/plugin-update-checker/plugin-update-checker.php';
+use YahnisElsts\PluginUpdateChecker\v5\PucFactory;
+
+$skate_club_update_checker = PucFactory::buildUpdateChecker(
+	'https://github.com/anik-cse/skate-club-screen-app/',
+	__FILE__,
+	'skate-club-screen-app'
+);
+// Optional: Set the branch that contains the stable release.
+$skate_club_update_checker->setBranch('main');
+
+/**
  * Current plugin version.
  */
 define( 'SKATE_CLUB_VERSION', '1.1.0' );
